@@ -23,23 +23,38 @@ body{
 
 .navegation {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px #f2f2f2;
 }
 
-.navegation a {
+.navsearch{
+	display: flex;
+	align-items: center
+}
+
+i {
+    margin: 8px
+}
+
+.navbuttons{
+    align-items: center;
     display: flex;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+	justify-content: space-between;
+}
+
+.navbuttons img{
+    border-left: solid 2px #f2f2f2;
 }
 
 .navegation input[type=text] {
     padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
+    border: 2px solid #f2f2f2;
+    margin: 10px;
     font-size: 17px;
+    background-color: #f2f2f2;
+    border-radius: 25px
 }
 
 .header{

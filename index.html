@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teste</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+
+<body ng-app="cards" ng-controller="controller">
+	<div class="navbar">
+		<div class="home">
+			<div class="navegation">
+				<button type="submit"><i class="fa fa-search"></i></button>
+				<input type="text" placeholder="Parque Shopping Aricanduva">
+				<img src="icones/time-left.png"/>
+				<img src="icones/notification (1).png"/>
+				<p>Cassio Reis</p>
+			</div>
+
+			<div class="title">
+				<h1>LOCAIS</h1>
+			</div>
+
+			<div class="container">
+					<div ng-repeat="item in items">
+						<div class="card">
+							<div class="header">
+								<h1>PDV {{item.number}}</h1>
+								<div class="info">
+									<h1 class="data">{{item.date}} {{item.hour}}</h1>
+									<div class="status-show"></div>
+								</div>
+							</div>
+
+							<div class="content">
+								<div class="version">
+									<h1>{{item.sistemaop}}</h1>
+									<h1>{{item.version}}</h1>
+								</div>
+								<p>HD</p>
+								<div class="grafico">
+									<div class="barra"><div class='{{item.hdbar}}'></div></div>
+								</div>
+								<p>RAM</p>
+								<div class="grafico">
+									<div class="barra"><div class='{{item.rambar}}'></div></div>
+								</div>
+								<p>Processador</p>
+								<div class="grafico">
+									<div class="barra"><div class='{{item.processbar}}'></div></div>
+								</div>
+							</div>
+
+							<div class="footer">
+								<div class="bottom-left">
+									<img src="icones/placeholder-filled-tool-shape-for-maps.png" />
+									<p>{{item.local}}</p>
+								</div>
+								<div class="bottom-right">
+									<img src="icones/printer.png" class="{{item.printerstatus}}"/>
+									<img src="icones/cash-machine-with-ticket.png" class="{{item.cashstatus}}"/>
+									<img src="icones/supermarket-scanner.png" class="{{item.supermarketstatus}}"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="controller.js"></script>
+</body>
+
+</html>
